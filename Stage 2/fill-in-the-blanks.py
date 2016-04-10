@@ -1,8 +1,9 @@
 
 # Written by David Blum April 1st, 2016
-# Project: Fill in the Blank
+# Project: Create 'Fill in the Blank' Quiz
 # IPND Stage 2 Final Project
-
+#
+#
 # Sets up paragraphs and answers for different difficulty levels
 easy_ans = ['Python', 'language', 'variables', 'declare']
 easy_para = '''__1__, similar to C++ and Java, is a __2__ programmers use to write programs.
@@ -36,18 +37,6 @@ def user_choice(choices, question):
     while choice not in choices:
         choice = raw_input("\n" + question + "\n").upper()
     return choice
-
-'''
-# Outdated code. Chose to replace with user_choice. Originally returned ANY positive, whole number.
-# Large, positive numbers run outside scope of game
-def lives():
-    """lives(): prompts user and returns a positive, whole number."""
-    hearts = 'empty'
-    #checks input for positive, whole numbers
-    while not hearts.isdigit() or int(hearts) == 0:
-            hearts = raw_input("\nHow many attempts per word? (Pick a positive, whole number) \n")
-    return int(hearts)
-'''
 
 def user_guess(target, answer, guesses):
     """"user_guess(string, string, int): TARGET string is what blank the user is
@@ -87,8 +76,8 @@ def level(stage, guesses):
         print "\n\nThe current paragraph reads: \n\n" + stage[0]
         # If user runs out of guesses
         if user_guess(target, answer, guesses) == False:
-            print "\nYou LOSE"  
-            return 
+            print "\nYou LOSE"
+            return
         # If guess is correct updates paragraph
         stage[0] = stage[0].replace(target, answer)
         current_word += 1
@@ -104,7 +93,7 @@ def game_on():
         dif_levels = {"EASY": [easy_para, easy_ans],
                "MEDIUM": [med_para, med_ans],
                "HARD": [hard_para, hard_ans]}
-        
+
         # Title
         print "\n\n     FILL IN THE BLANKS \n"
 
@@ -116,12 +105,10 @@ def game_on():
         level(dif_levels[difficulty], int(attempts))
 
         # Play again?
-        again = user_choice (['YES', 'Y', 'NO', 'N'], "Would you like to play again? Y/N") 
+        again = user_choice (['YES', 'Y', 'NO', 'N'], "Would you like to play again? Y/N")
         if again == 'NO' or again == 'N':
             print "\nThanks for Playing!"
             playing = False
-        
+
 # Command to run FILL IN THE BLANK game
 game_on()
-
-
