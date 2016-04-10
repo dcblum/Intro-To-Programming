@@ -1,0 +1,63 @@
+*{
+  outline: 1px solid red !important;
+  font-family: Verdana;
+}
+
+body {
+  background-color: #005A31;
+}
+
+.piclink {
+
+  display: block;
+  margin-left: 30%;
+  margin-right: 33%;
+
+}
+
+.header {
+  color: black;
+  text-align: center;
+  background-color: #A8CD1B;
+  border-radius: 1px;
+}
+
+.lesson{
+  margin: 10px;
+}
+
+h2 {
+  border-radius: 5px;
+  background-color: #CBE32D;
+  padding: 10px;
+  width: auto;
+}
+
+.concepts {
+  /*background-color: #F3FAB6;
+  border-radius: 5px;*/
+  display: flex;
+}
+
+.idea-title {
+  font-weight:bold;
+  margin-left: auto;
+  text-align: center;
+
+}
+
+.idea {
+  background-color: #F3FAB6;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 2px;
+}
+
+.description {
+  margin: 10px;
+  padding: 2px;
+}
+
+li {
+  vertical-align: text-bottom;
+}
