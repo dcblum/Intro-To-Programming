@@ -1,0 +1,45 @@
+/* This is a CSS comment.*/
+
+
+*{
+  outline: 1px solid red !important;
+}
+
+.app {
+  display: flex;
+
+}
+
+.screenshot {
+  max-width: 460px;
+  margin-right: 5px;
+}
+
+h1 {
+  text-align: left;
+  background-color: #33BEBE;
+  color: white;
+
+}
+
+img {
+  max-width: 100%;
+}
+
+.description {
+  max-width: 705px;
+  margin-left: 5px;
+  color: #7C8B88;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*
+Comments are only to help PEOPLE read a code file. The
+computer ignores them.
+*/
